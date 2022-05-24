@@ -25,6 +25,8 @@
 
 <div class="container">
   <div class="row">
+    <div id="overflowTest" class="overflow-auto">
+    <div class="table-responsive">
      <?php
       if ($user->is_login() && $user->getRole() == 2 && isset($_POST['update'])){
           $result_ruote_read = $ruote->read();
@@ -32,17 +34,17 @@
             ++$progress_next;
             ob_flush();  flush();                 
             $ruote_nome_archivio->create_ruota($key['id'],$key['ruota']);    
-              echo "Created Ruota ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);       
+              echo "Crea Ruota ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);       
             $ruote_nome_archivio->frequenze_5($key['id'],$key['ruota']);
-              echo "Created frequenze_5 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);         
+              echo "Crea frequenze_5 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);         
             $ruote_nome_archivio->frequenze_4($key['id'],$key['ruota']);
-              echo "Created frequenze_4 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);                              
+              echo "Crea frequenze_4 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);                              
             $ruote_nome_archivio->frequenze_3($key['id'],$key['ruota']);          
-              echo "Created frequenze_3 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);                            
+              echo "Crea frequenze_3 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);                            
             $ruote_nome_archivio->frequenze_2($key['id'],$key['ruota']);          
-              echo "Created frequenze_2 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);           
+              echo "Crea frequenze_2 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);           
             $ruote_nome_archivio->frequenze_1($key['id'],$key['ruota']);          
-              echo "Created frequenze_1 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);       
+              echo "Crea frequenze_1 ". $key['ruota'] ." ". $key['nome'] . '<br/>';   sleep($sleep);       
               $progress = ($progress_next/11) * 100; 
               //echo ($progress*100).'<br>'; 
             echo "
@@ -54,6 +56,8 @@
           }        
       }        
      ?>
+      </div>   
+    </div>     
   </div>
 </div>
 
