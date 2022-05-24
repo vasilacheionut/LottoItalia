@@ -183,20 +183,23 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
       Distanza    
       <div class="btn-toolbar">
         <div class="btn-group">
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">0</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">1</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">2</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">3</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">4</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">5</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">6</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">7</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">8</button>
-          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">9</button>
+          <?php for ($i=0; $i <=9 ; $i++) { ?>
+              <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)"><?= $i; ?></button>
+          <?php } ?>
         </div>
       </div>
-    </div>            
-
+    </div>     
+    
+    <div class="alert alert-light" role="alert">
+      Valore    
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <?php for ($i=1; $i <=17 ; $i++) { ?>
+              <button type="button" class="btn  btn-secondary" onclick="Valore(this.innerHTML)"><?= $i; ?></button>
+          <?php } ?>
+        </div>
+      </div>
+    </div>     
 
         
     </div>  
