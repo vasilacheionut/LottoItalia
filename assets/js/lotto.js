@@ -8,6 +8,12 @@ var colorBlue  = new Array(23, 24, 25, 26, 27, 28, 33, 38, 43, 48, 53, 58, 63, 6
 var colorBlack = new Array(34, 35, 36, 37, 44, 47, 54, 55, 56, 57);
 var colorGrey  = new Array(45, 46);
 
+var distanza  = new Array(
+    Array(11, 22, 33, 44, 55, 66, 77, 88),
+    Array(1, 10, 21, 23, 32, 34, 43, 45, 54, 56, 65, 67, 76, 78, 87, 89)
+);
+
+
 for (let index = 1; index <= 90; index++) {
     resetN(index);
 }      
@@ -16,6 +22,31 @@ for (let index = 1; index <= 90; index++) {
 function resetN(n) {
     number[n] = 0;
 }
+
+
+function Distanza(params) {
+    var nL, dist=null, nPara1, nPara2;
+    for (let index = 1; index <= 90; index++) {
+        nL = index.toString().length;
+        if(nL == 2){
+            nPara1 = parseInt(index.toString()[0]);
+            nPara2 = parseInt(index.toString()[1]);
+            if (nPara1 > nPara2) {
+                dist = nPara1 - nPara2;
+            } else if (nPara1 < nPara2) {
+                dist = nPara2 - nPara1;
+            } else {
+                dist = nPara1 - nPara2;                
+            }
+        } else {
+            dist = index;
+        }
+        if (dist == params){
+            SelectN(index);    
+        }
+    }               
+}
+
 
 function SelectC(params) {
     if(params == 'rN_Red') {

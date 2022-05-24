@@ -159,6 +159,17 @@ img.w100 {
     overflow: scroll;
   }
 
+
+#overflowNumberList {
+    width: 100%;
+    height: 250px;
+    overflow: scroll;
+}  
+
+#overflowNumberList::-webkit-scrollbar {
+    display: none;
+}
+
 input#verifica_min {
     max-width: 55px;
 }
@@ -182,6 +193,11 @@ input#verifica_max {
         height: 350px;
         overflow: scroll;
       }    
+
+      #overflowNumberList {
+        height: 100px;
+      }  
+
   }
 
 

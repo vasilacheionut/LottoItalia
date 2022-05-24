@@ -139,7 +139,7 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
     </table>
   </div>
 
-  <div class="col-sm">  
+  <div class="col-sm-2">  
     <div class="btn-toolbar">
       <div class="btn-group">
         <button class="btn btn-danger my-2 my-sm-0" id="clear" onclick="ClearN()"><i class="fa-solid fa-trash"></i> <span id="clear_nr">0 </span></button>
@@ -147,7 +147,7 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
     </div>
   </div>
 
-  <div class="col-sm">  
+  <div class="col-sm-2">  
     <div class="btn-toolbar">
       <div class="btn-group">
       <form class="form-inline my-2 my-lg-0" action="verifica.php" method="post">
@@ -163,19 +163,45 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
     </div>
   </div>
 
-  <div class="col-sm">  
-    <div class="btn-toolbar">
-      <div class="btn-group">
-        <button type="button" class="btn  rN_Red" onclick="SelectC('rN_Red')">34</button>
-        <button type="button" class="btn  rN_Green" onclick="SelectC('rN_Green')">26</button>
-        <button type="button" class="btn  rN_Blue" onclick="SelectC('rN_Blue')">18</button>
-        <button type="button" class="btn  rN_Black" onclick="SelectC('rN_Black')">10</button>
-        <button type="button" class="btn  rN_Grey" onclick="SelectC('rN_Grey')">2</button>
+  <div class="col-sm">
+    <div id="overflowNumberList">
+      
+    <div class="alert alert-light" role="alert">
+      Colore
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button type="button" class="btn  rN_Red" onclick="SelectC('rN_Red')">34</button>
+          <button type="button" class="btn  rN_Green" onclick="SelectC('rN_Green')">26</button>
+          <button type="button" class="btn  rN_Blue" onclick="SelectC('rN_Blue')">18</button>
+          <button type="button" class="btn  rN_Black" onclick="SelectC('rN_Black')">10</button>
+          <button type="button" class="btn  rN_Grey" onclick="SelectC('rN_Grey')">2</button>
+        </div>
       </div>
-    </div>
+    </div>    
+
+    <div class="alert alert-light" role="alert">
+      Distanza    
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">0</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">1</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">2</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">3</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">4</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">5</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">6</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">7</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">8</button>
+          <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)">9</button>
+        </div>
+      </div>
+    </div>            
+
+
+        
+    </div>  
   </div>
-  <div class="col-sm-4">
-  </div>
+
 </div>
 
 <br>
