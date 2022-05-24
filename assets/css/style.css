@@ -1,0 +1,188 @@
+body {
+    background-color: #ededed;
+    line-height: 1;
+}
+
+.table-responsive {
+    background-color: #fff;
+}
+
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 320px;
+}
+
+#register .container #login-row #login-column #login-box {
+    margin-top: 60px;
+    max-width: 600px;
+    height: 320px;
+}
+
+.up-space {
+    margin-top: 20px;
+}
+
+.down-space {
+    margin-bottom: 20px;
+}
+
+img.w100 {
+    width: -webkit-fill-available;
+}
+
+
+.archivio-scroll {
+    min-height: 550px;
+    height: 550px;    
+    overflow: scroll;    
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+/*-------------------------------------------------------*/
+.rN1, .rN2, .rN3, .rN4, .rN5, .rN6, .rN7, .rN8, .rN9, .rN10, 
+.rN11, .rN21, .rN31,.rN41, .rN51, .rN61, .rN71, 
+.rN20, .rN30,   .rN40, .rN50, .rN60,.rN70,.rN80,
+.rN81, .rN82, .rN83, .rN84, .rN85, .rN86, .rN87, .rN88, .rN89, .rN90, .rN_Red
+{
+    background-color:red !important;
+    color : yellow;
+    font-weight: bold;    
+    cursor: pointer;
+}
+
+.rN12, .rN13, .rN14, .rN15, .rN16, .rN17, .rN18, .rN19,
+.rN72, .rN73, .rN74, .rN75, .rN76, .rN77, .rN78, .rN79,
+.rN22, .rN32,.rN42,.rN52,.rN62,
+.rN29,  .rN39,  .rN49,  .rN59,  .rN69, .rN_Green
+{
+    background-color:green !important;
+    color :white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rN23, .rN24, .rN25, .rN26, .rN27, .rN28, 
+.rN63, .rN64, .rN65, .rN66, .rN67, .rN68,
+.rN38, .rN48, .rN58,
+ .rN33, .rN43,  .rN53, .rN_Blue
+{
+    background-color:#0000ff!important;
+    color: #00ffff;    
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rN34, .rN35, .rN36, .rN37, 
+.rN44,  .rN47,
+.rN54, .rN55, .rN56, .rN57, .rN_Black
+{
+    background-color: #000000 !important;
+    color: #ffa500;    
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rN45, .rN46, .rN_Grey
+{
+    background-color:#37649b   !important;    
+    color :#c0c0c0;    
+    font-weight: bold;
+    cursor: pointer;
+}
+/*---*/
+
+
+/*-------------------------------------------------------*/
+.pN1, .pN2, .pN3, .pN4, .pN5, .pN6, .pN7, .pN8, .pN9, .pN10, 
+.pN11, .pN21, .pN31,.pN41, .pN51, .pN61, .pN71, 
+.pN20, .pN30,   .pN40, .pN50, .pN60,.pN70,.pN80,
+.pN81, .pN82, .pN83, .pN84, .pN85, .pN86, .pN87, .pN88, .pN89, .pN90
+{
+    background-color:yellow !important;
+    color : red;
+    font-weight: bold;    
+    cursor: pointer;
+}
+
+.pN12, .pN13, .pN14, .pN15, .pN16, .pN17, .pN18, .pN19,
+.pN72, .pN73, .pN74, .pN75, .pN76, .pN77, .pN78, .pN79,
+.pN22, .pN32,.pN42,.pN52,.pN62,
+.pN29,  .pN39,  .pN49,  .pN59,  .pN69
+{
+    background-color:white !important;
+    color :green;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pN23, .pN24, .pN25, .pN26, .pN27, .pN28, 
+.pN63, .pN64, .pN65, .pN66, .pN67, .pN68,
+.pN38, .pN48, .pN58,
+ .pN33, .pN43,  .pN53
+{
+    background-color:#00ffff!important;
+    color: #0000ff;    
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pN34, .pN35, .pN36, .pN37, 
+.pN44,  .pN47,
+.pN54, .pN55, .pN56, .pN57
+{
+    background-color: #ffa500 !important;
+    color: #000000;    
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pN45, .pN46
+{
+    background-color:  #c0c0c0 !important;    
+    color :#37649b ;    
+    font-weight: bold;
+    cursor: pointer;
+}
+/*---------*/
+.screen td {
+    padding: 10px;
+}
+/*-------------------------------------------------------*/
+
+#overflowTest {
+    width: 100%;
+    height: 550px;
+    overflow: scroll;
+  }
+
+input#verifica_min {
+    max-width: 55px;
+}
+
+input#verifica_max {
+    max-width: 55px;
+}
+
+@media only screen and (max-width: 991px) {
+    .btn-toolbar {
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    #overflowTest {
+        width: 100%;
+        height: 350px;
+        overflow: scroll;
+      }    
+  }
+
+
+
