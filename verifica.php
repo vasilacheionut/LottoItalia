@@ -164,11 +164,18 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
   </div>
 
   <div class="col-sm">
-    <div id="overflowNumberList">
-      
-    <div class="alert alert-light" role="alert">
-      Colore
-      <div class="btn-toolbar">
+
+  <div class="bd-example bd-example-tabs">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Colore</a>
+      <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Distanza</a>
+      <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Valore</a>
+    </div>
+  </nav>
+  <div class="tab-content table-responsive" id="nav-tabContent">
+    <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="text-center">
         <div class="btn-group">
           <button type="button" class="btn  rN_Red" onclick="SelectC('rN_Red')">34</button>
           <button type="button" class="btn  rN_Green" onclick="SelectC('rN_Green')">26</button>
@@ -177,32 +184,28 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
           <button type="button" class="btn  rN_Grey" onclick="SelectC('rN_Grey')">2</button>
         </div>
       </div>
-    </div>    
-
-    <div class="alert alert-light" role="alert">
-      Distanza    
-      <div class="btn-toolbar">
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="text-center">
         <div class="btn-group">
           <?php for ($i=0; $i <=9 ; $i++) { ?>
               <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)"><?= $i; ?></button>
           <?php } ?>
         </div>
       </div>
-    </div>     
-    
-    <div class="alert alert-light" role="alert">
-      Valore    
-      <div class="btn-toolbar">
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <div class="text-center">
         <div class="btn-group">
           <?php for ($i=1; $i <=17 ; $i++) { ?>
               <button type="button" class="btn  btn-secondary" onclick="Valore(this.innerHTML)"><?= $i; ?></button>
           <?php } ?>
         </div>
-      </div>
-    </div>     
-
-        
-    </div>  
+      </div>      
+    </div>
+  </div>
+  </div>  
+  
   </div>
 
 </div>
