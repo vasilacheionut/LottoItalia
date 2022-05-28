@@ -3,7 +3,7 @@
   include "header.php";  
   $sleep = 0.5;
   $progress = 0;
-  $$progress_next = 0;
+  $progress_next = 0;
   //echo "Sleep ". $sleep;
   sleep($sleep);  
 ?>
