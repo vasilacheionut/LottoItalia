@@ -3,6 +3,12 @@ $title = "profilo";
 include "header.php";
 ?>
 <?php
+    
+    if (!$user->is_login()){
+      $location = "login.php";        
+      header("location:$location");
+    }    
+
 $location = 'profilo.php';
 $id = $user->getId();
 $result_array = $user->read_single($id);
