@@ -1,9 +1,8 @@
-#------------------------------
 DROP TABLE IF EXISTS  storico_filtrato_5;
 CREATE TABLE IF NOT EXISTS storico_filtrato_5 LIKE storico;
 
 INSERT INTO   storico_filtrato_5(data, ruota, n1, n2, n3, n4, n5) 
-SELECT distinct data, ruota, n1, n2, n3, n4, n5 FROM storico ORDER by data, ruota asc;
+SELECT distinct data, ruota, n1, n2, n3, n4, n5 FROM storico ORDER by data, ruota,  n1, n2, n3, n4, n5 asc;
 #************************************************
 
 #Sort n1---------------------
