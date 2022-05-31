@@ -28,7 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password  = $_POST['password'];
 
     if ($user->register($firstname, $lastname, $email, $password) == true) {
-      $user->login($email,  $password);
+      $_SESSION["username"] = $email;
+      $_SESSION["password"] = $password;
+      $user->login($_SESSION["username"], $_SESSION["password"]);    
       $user_id = $user->getId();
       sleep(0.5);  
       $ruota_selezionata->insert($user_id);
