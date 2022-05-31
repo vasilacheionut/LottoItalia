@@ -34,4 +34,10 @@ class RuotaSelezionata
       $result = $this->conn->run_multi_query($sql);
    }
 
+   public function insert($user_id)
+   {      
+      $sql = "INSERT INTO $this->table (`id`, `user_id`, `ruote_id`, `ultimo_aggiornamento`) VALUES (NULL, '$user_id', 1, current_timestamp());";      
+      $result = $this->conn->run_multi_query($sql);
+   }      
+
 }

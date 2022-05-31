@@ -24,15 +24,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   ){
     $firstname =  $_POST['firstname'];
     $lastname  =  $_POST['lastname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email     = $_POST['email'];
+    $password  = $_POST['password'];
 
     if ($user->register($firstname, $lastname, $email, $password) == true) {
+      $user->login($email,  $password);
+      $user_id = $user->getId();
+      sleep(0.5);  
+      $ruota_selezionata->insert($user_id);
       header("location:$location");
     } else {
       $register_error =  '
           <div class="alert alert-danger" role="alert">
-              <strong>User</strong> exists...
+              <strong>Utente </strong> gia registrato...
           </div>      
       ';
     }    
