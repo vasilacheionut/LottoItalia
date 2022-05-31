@@ -28,6 +28,7 @@
     foreach ($result_ruota_selezionata_read_single as $key) {
       $result_user = $user->read_single($key['user_id']);
       $result_ruote = $ruote->read_single($key['ruote_id']);      
+      $ruote_id = $key['ruote_id'];
       $nome = $result_ruote[0]['nome'];
       $ruota = $result_ruote[0]['ruota'];      
     }        
@@ -35,7 +36,8 @@
     $result_ruota_selezionata_read_single = $ruota_selezionata->read_single(1);   
     foreach ($result_ruota_selezionata_read_single as $key) {
       $result_user = $user->read_single($key['user_id']);
-      $result_ruote = $ruote->read_single($key['ruote_id']);      
+      $result_ruote = $ruote->read_single($key['ruote_id']);  
+      $ruote_id = $key['ruote_id'];          
       $nome = $result_ruote[0]['nome'];
       $ruota = $result_ruote[0]['ruota'];      
     }    
