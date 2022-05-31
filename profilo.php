@@ -51,6 +51,7 @@ if (isset($_POST['save_user'])) {
         ';
     }
 } else {
+    $newPassword = '';
     foreach ($result_array as $key) {
         $firstname = $key['firstname'];
         $lastname  = $key['lastname'];
@@ -116,8 +117,8 @@ if (isset($_POST['save_user'])) {
                     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                         <?php
                         echo "<tr>";
-                        echo '<td>' . "<input type='text' class='form-control text-center' id='oldPassword' name='oldPassword' placeholder='Vechia Password' value=''>" . '</td>';
-                        echo '<td>' . "<input type='text' class='form-control text-center' id='newPassword' name='newPassword' placeholder='Nuova Password' value='$newPassword'>" . '</td>';
+                        echo '<td>' . "<input type='text' class='form-control text-center' id='oldPassword' name='oldPassword' placeholder='Vechia Password' value='' required>" . '</td>';
+                        echo '<td>' . "<input type='text' class='form-control text-center' id='newPassword' name='newPassword' placeholder='Nuova Password' value='$newPassword' required>" . '</td>';
                         if ($user->is_login()) {
                             echo '<td>'
                                 . "<button type='submit' name='save_user' class='btn input-block-level form-control btn-info  text-center'><i class='fas fa-save'></i></button>"

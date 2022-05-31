@@ -17,7 +17,7 @@
 ?>
 
 <div class="table-responsive">
-  <table class="table table-hover table-bordered table-sm">      
+  <table class="table table-hover table-bordered table-sm  text-center">      
     <thead class='thead-dark'>
       <tr>
         <th scope="col">#</th>
@@ -43,7 +43,6 @@
         echo '<td>' . $key['password'] . '</td>';
         if ($user->is_login()) {
             echo '<td>' . "<a href='users_update.php?id=" . $key['id'] . "' class='text-info' type='submit'><i class='fas fa-pencil-alt'></i></a>" . '</td>';
-            echo '<td>' . "<a href='users_delete.php?id=" . $key['id'] . "' class='text-danger' type='submit'><i class='fas fa-trash'></i></a>" . '</td>';
         }
         echo "</tr>";
       }
