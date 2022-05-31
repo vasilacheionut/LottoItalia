@@ -164,11 +164,6 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
   </div>
 
   <div class="col-sm">
-  <div class="btn-group" role="group" data-toggle="button" aria-label="Basic example">
-  <button type="button" class="btn btn-outline-secondary">Left</button>
-  <button type="button" class="btn btn-outline-secondary">Middle</button>
-  <button type="button" class="btn btn-outline-secondary">Right</button>
-</div>
 
   <div class="bd-example bd-example-tabs">
   <nav>
