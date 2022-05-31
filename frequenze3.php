@@ -1,7 +1,8 @@
 <?php
   $title = "Frequenze 3";
   include "header.php";
-  $frequenze->setTable($ruota, 3);
+  $frequenza = 3;
+  $frequenze->setTable($ruota, $frequenza);
   $result_frequenze = $frequenze->read();  
 ?>
 
