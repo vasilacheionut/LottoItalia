@@ -284,7 +284,7 @@ class RuoteNomeArchivio
       PRIMARY KEY (`id`));
       
     INSERT INTO  ruota_".$ruota."_frequenze_5(data, ruota, n1, n2, n3, n4, n5, frequenza)
-    SELECT data, ruota, n1,n2, n3, n4, n5, count(*) as frequenza FROM storico_filtrato_5
+    SELECT MAX(data) as data, ruota, n1,n2, n3, n4, n5, count(*) as frequenza FROM storico_filtrato_5
     WHERE ruota IN (select rs.ruota from ruote as rs where id = $id)
     group by n1, n2, n3, n4, n5;       
     ";
@@ -310,7 +310,7 @@ class RuoteNomeArchivio
     PRIMARY KEY (`id`));
     
     INSERT INTO  ruota_".$ruota."_frequenze_4(data, ruota, n1, n2, n3, n4,  frequenza)
-    SELECT data, ruota, n1,n2, n3, n4,  count(*) as frequenza FROM storico_filtrato_4
+    SELECT MAX(data) as data, ruota, n1,n2, n3, n4,  count(*) as frequenza FROM storico_filtrato_4
     WHERE ruota IN (select rs.ruota from ruote as rs where id = $id)
     group by n1,n2,n3,n4;      
     ";
@@ -334,7 +334,7 @@ class RuoteNomeArchivio
     PRIMARY KEY (`id`));
     
     INSERT INTO  ruota_".$ruota."_frequenze_3(data, ruota, n1, n2, n3, frequenza)
-    SELECT data, ruota, n1,n2, n3,  count(*) as frequenza FROM storico_filtrato_3
+    SELECT MAX(data) as data, ruota, n1,n2, n3,  count(*) as frequenza FROM storico_filtrato_3
     WHERE ruota IN (select rs.ruota from ruote as rs where id = $id)
     group by n1,n2,n3;      
     ";
@@ -357,7 +357,7 @@ class RuoteNomeArchivio
     PRIMARY KEY (`id`));
     
     INSERT INTO  ruota_".$ruota."_frequenze_2(data, ruota, n1, n2, frequenza)
-    SELECT data, ruota, n1,n2, count(*) as frequenza FROM storico_filtrato_2
+    SELECT MAX(data) as data, ruota, n1,n2, count(*) as frequenza FROM storico_filtrato_2
     WHERE ruota IN (select rs.ruota from ruote as rs where id = $id)
     group by n1,n2;      
     ";
@@ -380,7 +380,7 @@ class RuoteNomeArchivio
     PRIMARY KEY (`id`));
     
     INSERT INTO  ruota_".$ruota."_frequenze_1(data, ruota, n1, frequenza)
-    SELECT data, ruota, n1, count(*) as frequenza FROM storico_filtrato_1
+    SELECT MAX(data) as data, ruota, n1, count(*) as frequenza FROM storico_filtrato_1
     WHERE ruota IN (select rs.ruota from ruote as rs where id = $id)
     group by n1;      
     ";
