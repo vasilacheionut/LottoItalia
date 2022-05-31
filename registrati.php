@@ -33,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $user->login($_SESSION["username"], $_SESSION["password"]);    
       $user_id = $user->getId();
       sleep(0.5);  
-      $ruota_selezionata->insert($user_id);
+      $ruote_id = $result_ruote;
+      $ruota_selezionata->insert($user_id, $ruote_id);
       header("location:$location");
     } else {
       $register_error =  '
