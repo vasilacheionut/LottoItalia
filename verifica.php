@@ -187,7 +187,7 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <div class="text-center">
-        <div class="btn-group" role="group" data-toggle="button" aria-label="Distanza">
+        <div class="btn-group">
           <?php for ($i=0; $i <=9 ; $i++) { ?>
               <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)"><?= $i; ?></button>
           <?php } ?>
@@ -196,7 +196,7 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
       <div class="text-center">
-        <div class="btn-group" role="group" data-toggle="button" aria-label="Valore">
+        <div class="btn-group">
           <?php for ($i=1; $i <=17 ; $i++) { ?>
               <button type="button" class="btn  btn-secondary" onclick="Valore(this.innerHTML)"><?= $i; ?></button>
           <?php } ?>
