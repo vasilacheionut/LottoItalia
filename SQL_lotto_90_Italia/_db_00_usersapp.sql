@@ -35,8 +35,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `displayname`, `registered`, `image`, `role`, `updated`) VALUES
-(1, 'Root', 'Admin', 'rootadmin@gmail.com', '799824ba3560d3955f302c392de50e2232991ffaeca6f24200cf46571b523489', 'Root Admin', '2022-02-02 18:40:11', 'profilos/vasilacheionut.jpeg', 2, '2022-02-02 18:40:11'),
-(2, 'Vasilache', 'Ionut', 'vasilacheorionut@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'Vasilache Ionut', '2022-02-02 18:41:56', 'profilos/vasilacheionut.jpeg', 1, '2022-02-02 18:41:56');
+(1, 'Root', 'Admin', 'rootadmin@gmail.com', '799824ba3560d3955f302c392de50e2232991ffaeca6f24200cf46571b523489', 'Root Admin', '2022-02-02 18:40:11', 'profilo/vasilacheionut.jpeg', 2, '2022-02-02 18:40:11'),
+(2, 'Vasilache', 'Ionut', 'vasilacheorionut@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'Vasilache Ionut', '2022-02-02 18:41:56', 'profilo/vasilacheionut.jpeg', 1, '2022-02-02 18:41:56');
 
 --
 -- Indexes for dumped tables

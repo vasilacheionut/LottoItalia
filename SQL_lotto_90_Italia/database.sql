@@ -38,8 +38,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`, `displayname`, `registered`, `image`, `role`, `updated`) VALUES
-(1, 'Root', 'Admin', 'rootadmin@gmail.com', '799824ba3560d3955f302c392de50e2232991ffaeca6f24200cf46571b523489', 'Root Admin', '2022-02-02 18:40:11', 'profilos/vasilacheionut.jpeg', 2, '2022-02-02 18:40:11'),
-(2, 'Vasilache', 'Ionut', 'vasilacheorionut@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'Vasilache Ionut', '2022-02-02 18:41:56', 'profilos/vasilacheionut.jpeg', 1, '2022-02-02 18:41:56');
+(1, 'Root', 'Admin', 'rootadmin@gmail.com', '799824ba3560d3955f302c392de50e2232991ffaeca6f24200cf46571b523489', 'Root Admin', '2022-02-02 18:40:11', 'profilo/vasilacheionut.jpeg', 2, '2022-02-02 18:40:11'),
+(2, 'Vasilache', 'Ionut', 'vasilacheorionut@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', 'Vasilache Ionut', '2022-02-02 18:41:56', 'profilo/vasilacheionut.jpeg', 1, '2022-02-02 18:41:56');
 
 --
 -- Indexes for dumped tables
@@ -67475,12 +67475,11 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-#------------------------------
 DROP TABLE IF EXISTS  storico_filtrato_5;
 CREATE TABLE IF NOT EXISTS storico_filtrato_5 LIKE storico;
 
 INSERT INTO   storico_filtrato_5(data, ruota, n1, n2, n3, n4, n5) 
-SELECT distinct data, ruota, n1, n2, n3, n4, n5 FROM storico ORDER by data, ruota asc;
+SELECT distinct data, ruota, n1, n2, n3, n4, n5 FROM storico ORDER by data, ruota,  n1, n2, n3, n4, n5 asc;
 #************************************************
 
 #Sort n1---------------------
@@ -67842,7 +67841,7 @@ CREATE TABLE `aggiorna` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
-INSERT INTO `aggiorna` (`database`,`ultimo_aggiornamento`) VALUES ('lotto_90_Italia_1',NOW());
+INSERT INTO `aggiorna` (`database`,`ultimo_aggiornamento`) VALUES ('lotto_90_Italia',NOW());
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -67852,7 +67851,7 @@ DROP TABLE IF EXISTS `ruota_selezionata`;
 CREATE TABLE `ruota_selezionata` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `ruote_id` int(11) NOT NULL,
+  `ruote_id` int(11) DEFAULT 1,
   `ultimo_aggiornamento` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -67862,12 +67861,15 @@ INSERT INTO `ruota_selezionata` (`id`, `user_id`, `ruote_id`, `ultimo_aggiorname
 
 
 ALTER TABLE `ruota_selezionata`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);  
 
 ALTER TABLE `ruota_selezionata`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
+ALTER TABLE `ruota_selezionata`
+  ADD CONSTRAINT `ruota_selezionata_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 drop table if exists  ruote_archivio;
 
