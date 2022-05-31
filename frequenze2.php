@@ -2,7 +2,8 @@
   $title = "Frequenze 2";
   include "header.php";
   $frequenza = 2;
-  $frequenze->setTable($ruota, $frequenza);  
+  $frequenze->setTable($ruota, $frequenza);
+  $frequenze->setOrderBy('n1, n2');
   $result_frequenze = $frequenze->read();  
 ?>
 

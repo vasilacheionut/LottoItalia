@@ -3,6 +3,7 @@
   include "header.php";
   $frequenza = 1;
   $frequenze->setTable($ruota, $frequenza);
+  $frequenze->setOrderBy('n1');
   $result_frequenze = $frequenze->read();  
 ?>
 

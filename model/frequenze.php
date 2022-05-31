@@ -4,6 +4,7 @@ class Frequenze
 {
    private $conn;
    private $table;   
+   private $orderBy;
       
    public function __construct($db)
    {
@@ -21,10 +22,24 @@ class Frequenze
        return $this->table;
    }
 
+   public function setOrderBy($orderBy = "")
+   {
+      if (isset($orderBy)){
+         return $this->orderBy = 'order by '.$orderBy;
+      } else {
+         return $this->orderBy = $orderBy;
+      }       
+   }   
+
+   public function getOrderBy()
+   {
+       return $this->orderBy;
+   }   
+
    //Read all
    public function read()
    {
-      $sql = "SELECT * FROM `".$this->getTable()."`";      
+      $sql = "SELECT * FROM ".$this->getTable().' '.$this->getOrderBy();      
       $result = $this->conn->result_array($sql);
       return $result;
    }
