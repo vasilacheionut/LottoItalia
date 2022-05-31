@@ -164,6 +164,11 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
   </div>
 
   <div class="col-sm">
+  <div class="btn-group" role="group" data-toggle="button" aria-label="Basic example">
+  <button type="button" class="btn btn-outline-secondary">Left</button>
+  <button type="button" class="btn btn-outline-secondary">Middle</button>
+  <button type="button" class="btn btn-outline-secondary">Right</button>
+</div>
 
   <div class="bd-example bd-example-tabs">
   <nav>
@@ -187,7 +192,7 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
     </div>
     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
       <div class="text-center">
-        <div class="btn-group">
+        <div class="btn-group" role="group" data-toggle="button" aria-label="Distanza">
           <?php for ($i=0; $i <=9 ; $i++) { ?>
               <button type="button" class="btn  btn-secondary" onclick="Distanza(this.innerHTML)"><?= $i; ?></button>
           <?php } ?>
@@ -196,7 +201,7 @@ $result_verifica = $ruote_nome_archivio->verifica($verifica, $verifica_min, $ver
     </div>
     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
       <div class="text-center">
-        <div class="btn-group">
+        <div class="btn-group" role="group" data-toggle="button" aria-label="Valore">
           <?php for ($i=1; $i <=17 ; $i++) { ?>
               <button type="button" class="btn  btn-secondary" onclick="Valore(this.innerHTML)"><?= $i; ?></button>
           <?php } ?>
