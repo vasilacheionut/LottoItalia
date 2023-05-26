@@ -24,10 +24,6 @@ class Database extends mysqli
     // Connection to MySQL server
     $this->conn = new mysqli($this->servername, $this->username, $this->password);
 
-    // Create database if not exists
-    $sql = "CREATE DATABASE IF NOT EXISTS $this->dbname";
-    $this->conn->query($sql);
-
     // Connection to MySQL server and Database
     $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 
@@ -36,6 +32,10 @@ class Database extends mysqli
       die("Connection failed : " . $this->connect_error);
     }
 
+    // Create database if not exists
+    $sql = "CREATE DATABASE IF NOT EXISTS $this->dbname";
+    $this->conn->query($sql);    
+    
     return $this->conn;
   }
 
