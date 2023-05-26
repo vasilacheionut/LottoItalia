@@ -11,6 +11,9 @@ class Database extends mysqli
   public function __construct()
   {
     $this->init_connection();
+    // Create database if not exists
+    $sql = "CREATE DATABASE IF NOT EXISTS $this->dbname";
+    $this->conn->query($sql);        
   }
 
   public function init_connection()
@@ -31,10 +34,6 @@ class Database extends mysqli
     if ($this->connect_error) {
       die("Connection failed : " . $this->connect_error);
     }
-
-    // Create database if not exists
-    $sql = "CREATE DATABASE IF NOT EXISTS $this->dbname";
-    $this->conn->query($sql);    
     
     return $this->conn;
   }
